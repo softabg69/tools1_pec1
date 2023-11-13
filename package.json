@@ -1,0 +1,14 @@
+{
+  "name": "pec1",
+  "version": "1.0.0",
+  "description": "PEC 1. Desarrollo sitio web",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ablancogonza",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.2"
+  }
+}
