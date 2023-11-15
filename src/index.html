@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,36 @@
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="app.js"></script>
 </head>
-<body>
-    <h1>Hello world</h1>
+
+<body class="portada">
+    <header></header>
+    <!-- <header>
+        <nav>
+            <a href="index.html" class="menu-item selected">Portada</a>
+            <a href="categoria.html" class="menu-item">Categoría</a>
+            <a href="presentacion.html" class="menu-item">Presentación</a>
+            <a href="enlaces.html" class="menu-item">Enlaces</a>
+        </nav>
+    </header> -->
+
+    <main>
+        <h1 class="serie">The Witcher</h1>
+    </main>
+
+    <footer>
+        <div class="copyright">2023 © Antonio Blanco González</div>
+        <div class="texto-footer">
+            Herramientas HTML y CSS 1. PEC 1
+        </div>
+    </footer>
+    <script type="module">
+       import * as menuLib from "./menu.js";
+
+        var header = document.getElementsByTagName('header')[0];
+        var nav = menuLib.menu(1);
+        header.append(nav);
+        menuLib.aplicaEstilos(nav);
+    </script>
 </body>
+
 </html>
