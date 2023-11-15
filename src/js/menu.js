@@ -1,6 +1,6 @@
 export function menu(n) {
     var nav = document.createElement('nav');
-    nav.appendChild(menuItem(n, 1, 'Portada', 'portada.html'));
+    nav.appendChild(menuItem(n, 1, 'Portada', 'index.html'));
     nav.appendChild(menuItem(n, 2, 'Categoría', 'categoria.html'));
     nav.appendChild(menuItem(n, 3, 'Presentación', 'presentacion.html'));
     nav.appendChild(menuItem(n, 4, 'Enlaces', 'enlaces.html'));

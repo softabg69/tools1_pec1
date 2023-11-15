@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categoría</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+    <header></header>
+    <main>
+        <div>Categorias</div>
+    </main>
+    <footer>
+        <include src="src/footer.html"></include>
+    </footer>
+
+    <script type="module">
+       import * as menuLib from "./js/menu.js";
+      
+        var header = document.getElementsByTagName('header')[0];
+        var nav = menuLib.menu(2);
+        header.append(nav);
+        menuLib.aplicaEstilos(nav);
+    </script>
 </body>
 </html>
