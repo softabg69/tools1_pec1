@@ -2,7 +2,7 @@
   "name": "pec1",
   "version": "1.0.0",
   "description": "PEC 1. Desarrollo sitio web",
-  "source": ["src/index.html", "src/categoria.html"],
+  "source": ["src/index.html", "src/categoria.html", "src/presentacion.html","src/enlaces.html"],
   "scripts": {
     "start": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build",
