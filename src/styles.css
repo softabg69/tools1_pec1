@@ -94,9 +94,50 @@ nav a {
 nav a:hover {
     background-color: rgb(222, 12, 23);    
 }
+.grid-personajes {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 
-.separador-pipe::after {
-    content: '|';
+}
+
+.personaje {
+    margin: 20px;
+    width: 45%;
+    aspect-ratio: 4/3;
+    text-decoration: none;
+}
+
+.personaje-contenedor-img {
+    background-color: aqua;
+    height: 100%; 
+    width: 100%;
+}
+
+a h3 {
+    color:white;
+    margin-bottom: 5px
+}
+
+.personaje-img {
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    opacity: 0.9;
+}
+
+.personaje-img:hover {
+    opacity: 1;
+}
+
+.personaje-texto {
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
 }
 
 
@@ -107,15 +148,31 @@ nav a:hover {
     }
 }
 
+@media (max-width: 1024px) {
+   
+    
+    
+} 
+
 @media (max-width: 680px) {
     .serie {
         font-size: 5rem; 
+    }
+    .personaje {
+       
+        width: 90%;
+        
     }
 }
 
 @media (max-width: 400px) {
     .serie {
         font-size: 3rem; 
+    }
+    .personaje {
+       
+        width: 90%;
+        
     }
 }
 
