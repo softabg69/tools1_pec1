@@ -7,11 +7,11 @@ html {
 body {
     margin: 0;  
     min-height: 100vh;  
-    color: rgb(23, 23, 23);
+    color: white;
     background-color: black;
     display:flex; 
     flex-direction:column;
-    overflow: hidden;
+   
 }
 
 @font-face {
@@ -20,9 +20,14 @@ body {
 } 
 
 footer {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.footer-fijo {
     position: absolute;
     bottom: 0;
-    margin-left: 20px;
+    margin-top: 0;
 }
 
 nav {
@@ -37,6 +42,7 @@ nav {
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
+    overflow: hidden;
 }
 
 .serie {
@@ -44,12 +50,12 @@ nav {
     font-size: 7rem;
     color: white;
     margin-top: calc(65vh);
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .copyright {
     color: white;
-    font-size: 0.8rem; /* 0,64 */
+    font-size: 0.8rem;
     margin-bottom: 5px; 
 }
 
@@ -58,13 +64,6 @@ nav {
     font-size: 0.95rem;
     color: white;
 }
-
-.enlaces-footer a {
-    padding-top: 2em;
-    text-decoration: none;    
-    color: white;
-}
-
 
 nav a {
     color: white;
@@ -94,6 +93,37 @@ nav a {
 nav a:hover {
     background-color: rgb(222, 12, 23);    
 }
+
+.contenedor-imagenes {
+    display: grid;    
+    margin-top: 1rem;
+}
+
+.contenedor-imagenes a {
+    text-decoration: none;
+    color: white;      
+}
+
+figure img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    opacity: 0.8;
+}
+
+figure img:hover {
+    opacity: 1;
+}
+
+.actor {
+    font-size: 1rem;
+}
+
+.papel {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
 .grid-personajes {
     
     display: flex;
@@ -140,6 +170,94 @@ a h3 {
     color: white;
 }
 
+.detalle {
+    margin: 10px 20px;
+}
+
+iframe {
+    aspect-ratio: 16/9;
+}
+
+article {
+    min-width: 373px;
+}
+section p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 600px) {   
+    .container {
+        margin: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;        
+    }
+    .contenedor-imagenes {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 3rem;
+    }
+    .serie {
+        font-size: 4rem;
+        margin-top: calc(45vh);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .contenedor-imagenes {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+    }
+    .portada {
+        background-image: url('./img/the_witcher1.jpg');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .detalle {
+        margin: 10px 130px;
+    }
+}
+
+@media only screen and (max-height: 850px) {
+    .serie {
+        margin: 0;
+        font-size: 4rem;
+        margin-top: calc(55vh);
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-height: 550px) {
+    .serie {
+        margin: 0;
+        font-size: 4rem;
+        margin-top: calc(35vh);
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-height: 280px) {
+    footer {
+        display: none;
+    }
+    .serie {
+        font-size: 3rem;
+        margin-top: calc(15vh);
+    }
+}
+
+/* 
 
 @media (min-width: 1300px) {
     .portada {
@@ -205,7 +323,7 @@ a h3 {
         display: none;
     }
     
-}
+} */
 
 
 

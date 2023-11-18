@@ -10,51 +10,60 @@
 
 <body>
     <header></header>
-    <main class="grid-personajes">
-        <article class="personaje">
-            <a href="geralt.html" >
-                <h3>Geralt de Rivia</h3>
-                <div class="personaje-contenedor-img">
-                    <img src="./img/cavill-geralt.webp" alt="Geralt de Rivia" class="personaje-img" />
-                </div>
-            </a>
-        </article>
-        <article class="personaje">
-            <a href="geralt.html" >
-                <h3>Yennefer de Vengerberg</h3>
-                <div class="personaje-contenedor-img">
-                    <img src="./img/Yennefer.jpeg" alt="Yennefer de Vengerberg" class="personaje-img" />
-                </div>
-            </a>
-        </article>
-        <article class="personaje">
-            <a href="geralt.html" >
-                <h3>Princesa Ciride de Cintra</h3>
-                <div class="personaje-contenedor-img">
-                    <img src="./img/PrincesaCirideCintra.webp" alt="Princesa Ciride de Cintra" class="personaje-img" />
-                </div>
-            </a>
-        </article>
-        <article class="personaje">
-            <a href="geralt.html" >
-                <h3>Jaskier</h3>
-                <div class="personaje-contenedor-img">
-                    <img src="./img/Jaskier.webp" alt="Jaskier" class="personaje-img" />
-                </div>
-            </a>
-        </article>
-    </main>
+    <article>
+        <section>
+            <div class="contenedor-imagenes">
+                <a href="geralt.html">
+                    <figure>
+                        <img src="./img/cavill-geralt.webp" alt="Geralt de Rivia" />
+                        <figcaption>
+                            <div class="actor">Henry Cavill</div>
+                            <div class="papel">Geralt de Rivia</div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="proximamente.html">
+                    <figure>
+                        <img src="./img/Yennefer.jpeg" alt="Yennefer de Vengerberg" />
+                        <figcaption>
+                            <div class="actor">Anya Chalotra</div>
+                            <div class="papel">Yennefer de Vengerberg</div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="proximamente.html">
+                    <figure>
+                        <img src="./img/PrincesaCirideCintra.webp" alt="Princesa Ciride de Cintra" />
+                        <figcaption>
+                            <div class="actor">Freya Allan</div>
+                            <div class="papel">Princesa Ciride de Cintra</div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="proximamente.html">
+                    <figure>
+                        <img src="./img/Jaskier.webp" alt="Jaskier" />
+                        <figcaption>
+                            <div class="actor">Joey Batey</div>
+                            <div class="papel">Jaskier</div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </section>
+    </article>
     <footer>
         <include src="src/footer.html"></include>
     </footer>
 
     <script type="module">
-       import * as menuLib from "./js/menu.js";
-      
+        import * as menuLib from "./js/menu.js";
+
         var header = document.getElementsByTagName('header')[0];
         var nav = menuLib.menu(2);
         header.append(nav);
         menuLib.aplicaEstilos(nav);
     </script>
 </body>
+
 </html>
