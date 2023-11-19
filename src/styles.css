@@ -1,23 +1,27 @@
-html {   
+html {
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
-    font-size: 14px;  
+    font-size: 14px;
 }
 
 body {
-    margin: 0;  
-    min-height: 100vh;  
+    margin: 0;
+    min-height: 100vh;
     color: white;
     background-color: black;
-    display:flex; 
-    flex-direction:column;
-   
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    overflow: hidden;
 }
 
 @font-face {
     font-family: 'witcher';
-    src: url('./fonts/Thewitcher-jnOj.ttf') format('truetype'); 
-} 
+    src: url('./fonts/Thewitcher-jnOj.ttf') format('truetype');
+}
 
 footer {
     margin-top: 30px;
@@ -35,6 +39,10 @@ nav {
     margin-top: 15px;
     margin-left: 10px;
     line-height: 3rem;
+}
+
+p {
+    text-align: justify;
 }
 
 .portada {
@@ -56,25 +64,26 @@ nav {
 .copyright {
     color: white;
     font-size: 0.8rem;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 .texto-footer {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     font-size: 0.95rem;
     color: white;
 }
 
 nav a {
     color: white;
-    text-decoration: none;   
+    text-decoration: none;
 }
 
 .menu-item {
-    padding: 10px;    
-    background-color: rgba(0,0,0,0.5);   
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     margin-right: 10px;
+    font-size: 1rem;
 }
 
 .menu-item:hover {
@@ -91,17 +100,17 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgb(222, 12, 23);    
+    background-color: rgb(222, 12, 23);
 }
 
 .contenedor-imagenes {
-    display: grid;    
+    display: grid;
     margin-top: 1rem;
 }
 
 .contenedor-imagenes a {
     text-decoration: none;
-    color: white;      
+    color: white;
 }
 
 figure img {
@@ -125,7 +134,7 @@ figure img:hover {
 }
 
 .grid-personajes {
-    
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -143,19 +152,19 @@ figure img:hover {
 
 .personaje-contenedor-img {
     background-color: aqua;
-    height: 100%; 
+    height: 100%;
     width: 100%;
 }
 
 a h3 {
-    color:white;
+    color: white;
     margin-bottom: 5px
 }
 
 .personaje-img {
     object-fit: cover;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     opacity: 0.9;
 }
 
@@ -178,12 +187,9 @@ iframe {
     aspect-ratio: 16/9;
 }
 
-article {
-    min-width: 373px;
-}
 section p {
     font-size: 1.2rem;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
 }
 
 .centrado {
@@ -194,21 +200,103 @@ section p {
     font-size: 2rem;
 }
 
-@media only screen and (min-width: 600px) {   
+.presentacion {
+    width: 1024;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dos-una {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.entrada {
+    font-size: 2.3rem;
+    line-height: 3rem;
+}
+
+.sangrado {
+    margin-left: 30px;
+}
+
+.uno-cinco {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.blanco {
+    color: white;
+}
+
+.inverso {
+    color: black;
+    background-color: #ddd;
+    padding: 5px;
+}
+
+a figure figcaption {
+    color: white;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.separacion {
+    margin: 1.5rem 0;
+}
+
+
+@media only screen and (min-width: 600px) {
     .container {
         margin: 1rem;
         margin-left: auto;
         margin-right: auto;
-        max-width: 700px;        
+        max-width: 700px;
     }
+
     .contenedor-imagenes {
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
         row-gap: 3rem;
     }
+
     .serie {
         font-size: 4rem;
         margin-top: calc(45vh);
+    }
+
+}
+
+@media only screen and (max-width: 370px) {
+    .menu-item {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .uno-cinco {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .presentacion {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+    .entrada {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .dos-una {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -217,6 +305,7 @@ section p {
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 2rem;
     }
+
     .portada {
         background-image: url('./img/the_witcher1.jpg');
         background-repeat: no-repeat;
@@ -224,6 +313,7 @@ section p {
         background-size: cover;
         overflow: hidden;
     }
+
     .detalle {
         margin: 10px 130px;
     }
@@ -251,421 +341,9 @@ section p {
     footer {
         display: none;
     }
+
     .serie {
         font-size: 3rem;
         margin-top: calc(15vh);
     }
 }
-
-/* 
-
-@media (min-width: 1300px) {
-    .portada {
-        background-image: url('./img/the_witcher1.jpg');
-        background-position: right top;
-    }
-}
-
-@media (max-width: 1024px) {
-   
-    
-    
-} 
-
-@media (max-width: 680px) {
-    .serie {
-        font-size: 5rem; 
-    }
-    .personaje {
-       
-        width: 90%;
-        
-    }
-}
-
-@media (max-width: 400px) {
-    .serie {
-        font-size: 3rem; 
-    }
-    .personaje {
-       
-        width: 90%;
-        
-    }
-}
-
-
-
-@media (max-height: 580px) {
-    .serie {
-        font-family: 'witcher';
-        font-size: 5rem;
-        color: white;
-        margin-top: calc(40vh);
-        margin-left: 30px;
-    }
-    
-}
-
-@media (max-height: 290px) {
-    .serie {
-        font-family: 'witcher';
-        font-size: 4rem;
-        color: white;
-        margin-top: calc(20vh);
-        margin-left: 30px;
-    }
-    
-}
-
-@media (max-height: 190px) {
-    footer {
-        display: none;
-    }
-    
-} */
-
-
-
-/* a {
-    color: rgb(23,23,23);
-    text-decoration: underline;
-    text-decoration-style: dotted;
-}
-
-a:hover {    
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    color: rgb(222, 12, 23);
-    text-decoration-color: rgb(222,12,23);
-}
-
-.container {
-    width: 840px;
-    margin-left: auto;
-    margin-right: auto;    
-}
-
-.flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-}
-
-.imagen-fondo {
-    height: 100vh;
-    background-image: url('./img/the_witcher1.jpg');
-    background-size: cover;
-    background-color: black;
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-
-nav {
-    margin-top: 12px;
-    font-size: 1.1rem;   
-    color:white; 
-}
-
-nav a {
-    color: white;
-    text-decoration: none;    
-}
-
-.menu-item {
-    padding: 3px;       
-}
-
-.menu-item:hover {
-    color: #fff;
-}
-
-.selected {
-    font-weight: 700;
-}
-
-nav a:hover {
-    background-color: rgb(222, 12, 23);    
-}
-
-.separador-pipe::after {
-    content: '|';
-}
-
-main {   
-    font-weight: 700;
-    padding-bottom: 70px;    
-}
-
-.logo {
-    display: flex;
-    align-items:center; 
-}
-
-.isoelec {
-    margin-top: 20px;
-}
-
-.ritmo {
-    font-size: 7.8rem;    
-    color: white;
-    margin-left: 12px;    
-}
-
-.club {
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 20px;
-    letter-spacing: 0.011em;
-    margin-top: -8px;
-}
-*/
-
-/* 
-.header {
-    background-color: black;
-    height: 115px;
-    padding-top: 20px;
-    margin-bottom: 35px;
-}
-
-.isoelec-header {
-    width: 20px;
-    margin-top: 8px;
-}
-
-.ritmo-header {
-    color: white;
-    margin-left: 10px;
-    font-size: 2.4rem;
-    font-weight: 700;
-}
-
-article {
-    flex: 1;
-}
-
-
-h1,h2 {
-    font-weight: 700;
-    
-}
-
-ul {
-    padding-inline-start: 25px;
-}
-
-li {
-    margin-bottom: 1rem;
-}
-
-p {
-    line-height: 1.3rem;
-    font-weight: 400;    
-}
-
-p > a {
-    color: rgb(23,23,23);
-    text-decoration: underline;
-    text-decoration-style: dotted;
-}
-
-p > a:hover {
-    color: rgb(222,12,23);
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: rgb(222,12,23);;
-}
-
-.cita {
-    font-size: 0.8rem;
-}
-
-
-
-.lema {
-    background-color: rgba(0,0,0,0.1);
-    font-size: 1.8rem;
-    text-align: center;
-    padding: 10px;
-    padding-bottom: 20px;
-    margin-top: 4px;
-    margin-bottom: 24px;
-}
-
-.lema div {
-    font-size: 0.9rem;
-    margin-top: 4px;    
-    font-weight: 250;
-}
-
-caption {
-    margin-bottom: 5px;
-    border-bottom: 1px solid #bbb;
-}
-
-table {
-    width: 100%;      
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-thead {       
-    border-bottom: 1px solid #bbb;        
-}
-
-th[scope=col] {
-    font-weight: 400;
-    text-align: center;
-    padding-bottom: 8px;
-}
-
-th[scope=row] {
-    font-weight: 700;
-    text-align: left;    
-    font-size: 1.2rem;
-    padding: 8px;
-}
-
-.left {
-    text-align: left!important;
-}
-
-td {
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-tbody tr:nth-child(odd){
-    background-color: rgba(0,0,0,0.1);
-    color: rgb(23,23,23);
-  }
-
-td > div > div > img {
-    max-width: 24px;
-}
-
-table {
-    margin-top: 24px ;
-}
-
-table > caption {
-    border-top: 1px solid #bbb;
-    font-size: 1.2rem;
-    padding: 3px;    
-}
-
-.img-header {
-    max-height: 20px;
-}
-
-td > div {
-    margin-top: 4px;
-    margin-bottom: 3px;
-}
-
-tfoot {
-    border-bottom: 1px solid #bbb;
-}
-
-tfoot > tr > td {
-    text-align: left;
-    padding: 8px;
-    font-size: 0.8rem;    
-}
-
-.border-inf {
-    border-bottom: 1px solid #bbb;
-    padding-bottom: 8px;
-    
-}
-
-.container2 {
-    width: 740px;
-    margin-top: 26px;
-    margin-left: auto;
-    margin-right: auto;    
-}
-
-fieldset {
-    padding: 27px;
-    margin-bottom: 14px;
-    padding-bottom: 25px;
-    border-color: #aaa;
-    border-width: 1px;
-}
-
-legend {
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-form > p {
-    font-size: 0.8rem;
-    margin-bottom: 14px;
-}
-
-.dos-col {
-    display: flex;
-    gap: 20px;
-}
-.col {
-    flex: 1;
-    width: 100%;    
-}
-input[type=text], select {
-    box-sizing:border-box;
-    width: 100%;    
-    padding: 10px;
-    margin-bottom: 13px;
-}
-
-select {   
-    background-color: white;
-    border: 1px solid #ccc;
-}
-
-label {
-    display: block;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-.radio {
-    margin-bottom: 12px;
-}
-
-.radio label {
-    display: inline;
-    font-size: 0.9rem;
-}
-
-textarea {
-    width: 100%;
-    height: 180px;
-    box-sizing:border-box;
-    margin-bottom: 18px;
-}
-
-.container3 {
-    width: 680px;
-    margin-top: 26px;
-    margin-left: auto;
-    margin-right: auto;    
-}
-
-input[type=submit] {
-    display: block;
-    margin-top: 16px;
-    background-color: rgb(222, 12, 23);
-    color: #fff;
-    padding: 10px 22px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.required::after {
-    content: ' *';
-} 
- */
