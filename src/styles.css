@@ -227,6 +227,7 @@ section p {
 
 .blanco {
     color: white;
+    word-wrap: break-word;
 }
 
 .inverso {
