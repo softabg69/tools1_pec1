@@ -260,11 +260,6 @@ a figure figcaption {
         row-gap: 3rem;
     }
 
-    .serie {
-        font-size: 4rem;
-        margin-top: calc(45vh);
-    }
-
 }
 
 @media only screen and (max-width: 370px) {
@@ -279,6 +274,10 @@ a figure figcaption {
     .uno-cinco {
         display: grid;
         grid-template-columns: 2fr 3fr;
+    }
+    .serie {
+        font-size: 4rem;
+        
     }
 }
 
